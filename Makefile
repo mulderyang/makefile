@@ -7,11 +7,5 @@ all : $(TARGET)
 $(TARGET) : $(OBJS)
 	$(CC) -o $@ $^
 
-main.o :
-	$(CC) -c main.c
-
-kor.o :
-	$(CC) -c kor.c
-
-usa.o :
-	$(CC) -c usa.c
+.c.o :
+	$(CC) -c -o $@ $<
