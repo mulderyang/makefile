@@ -3,11 +3,12 @@ TARGET = app.out
 OBJS = main.o kor.o usa.o
 
 CFLAGS = -Wall
+LDFLAGS = -lc
 
 all : $(TARGET)
 
 $(TARGET) : $(OBJS)
-	$(CC) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^
 
 .c.o :
 	$(CC) $(CFLAGS) -c -o $@ $<
