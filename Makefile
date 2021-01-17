@@ -4,6 +4,9 @@ OBJS = main.o kor.o usa.o
 
 all : $(TARGET)
 
+$(TARGET) : $(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
+
 main.o :
 	$(CC) -c main.c
 
@@ -12,6 +15,3 @@ kor.o :
 
 usa.o :
 	$(CC) -c usa.c
-
-$(TARGET) : $(OBJS)
-	$(CC) -o $(TARGET) $(OBJS)
