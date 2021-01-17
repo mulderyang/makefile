@@ -1,13 +1,15 @@
+CC = gcc
+
 all : app.out
 
 main.o :
-	gcc -c main.c
+	$(CC) -c main.c
 
 kor.o :
-	gcc -c kor.c
+	$(CC) -c kor.c
 
 usa.o :
-	gcc -c usa.c
+	$(CC) -c usa.c
 
 app.out : main.o kor.o usa.o
-	gcc -o app.out main.o kor.o usa.o
+	$(CC) -o app.out main.o kor.o usa.o
