@@ -1,5 +1,4 @@
-app.out : main.o kor.o usa.o
-	gcc -o app.out main.o kor.o usa.o
+all : app.out
 
 main.o :
 	gcc -c main.c
@@ -9,3 +8,6 @@ kor.o :
 
 usa.o :
 	gcc -c usa.c
+
+app.out : main.o kor.o usa.o
+	gcc -o app.out main.o kor.o usa.o
