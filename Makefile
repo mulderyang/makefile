@@ -9,3 +9,6 @@ $(TARGET) : $(OBJS)
 
 .c.o :
 	$(CC) -c -o $@ $<
+
+clean :
+	rm -f $(OBJS) $(TARGET)
