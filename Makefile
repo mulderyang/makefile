@@ -1,6 +1,7 @@
 CC = gcc
+TARGET = app.out
 
-all : app.out
+all : $(TARGET)
 
 main.o :
 	$(CC) -c main.c
@@ -11,5 +12,5 @@ kor.o :
 usa.o :
 	$(CC) -c usa.c
 
-app.out : main.o kor.o usa.o
-	$(CC) -o app.out main.o kor.o usa.o
+$(TARGET) : main.o kor.o usa.o
+	$(CC) -o $(TARGET) main.o kor.o usa.o
